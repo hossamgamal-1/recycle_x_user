@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../presentation/resources/themes_manager.dart';
-import '../presentation/screens/auth_screen.dart';
 import 'app_router.dart';
 
 class MyApp extends StatelessWidget {
@@ -24,8 +23,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         title: 'RecycleX',
         debugShowCheckedModeBanner: false,
-        // initialRoute: AppRouter.getIntialRoute(),
-        home: const AuthScreen(),
+        initialRoute: AppRouter.getIntialRoute(),
         onGenerateRoute: AppRouter.getRoute,
         theme: ThemeManager.getLightTheme(),
       ),

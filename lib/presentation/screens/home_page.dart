@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:recyclex/business_logic/cubit/home_page/home_page_cubit.dart';
+import 'package:recyclex/presentation/business_logic/cubit/home_page/home_page_cubit.dart';
 import 'package:recyclex/presentation/resources/color_manager.dart';
 import 'package:recyclex/presentation/resources/text_style_manager.dart';
 
-import '../../model/points.dart';
-import '../../model/user.dart';
+import '../../data/model/points.dart';
+import '../../data/model/user.dart';
 import '../widgets/home_page/nav_bar.dart';
 
 class HomePage extends StatelessWidget {

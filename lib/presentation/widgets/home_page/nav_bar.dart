@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../business_logic/cubit/home_page/home_page_cubit.dart';
+import '../../business_logic/cubit/home_page/home_page_cubit.dart';
 
 class HomePageNavBar extends StatelessWidget {
   const HomePageNavBar({super.key});

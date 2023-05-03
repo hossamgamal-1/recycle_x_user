@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:recyclex/business_logic/cubit/auth/auth_cubit.dart';
+import 'package:recyclex/app/app_router.dart';
 
-// import 'package:provider/provider.dart';
-
+import '../business_logic/cubit/auth/auth_cubit.dart';
+import '../resources/color_manager.dart';
 import '../widgets/auth/auth_button.dart';
 import '../widgets/auth/email_text_field.dart';
 import '../widgets/auth/password_text_field.dart';
 import '../widgets/auth/welcome_text.dart';
 
-class AuthScreen extends StatelessWidget {
-  const AuthScreen({Key? key}) : super(key: key);
+class AuthSignUpScreen extends StatelessWidget {
+  const AuthSignUpScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(),
         body: Center(
           child: SingleChildScrollView(
             child: Column(
@@ -39,6 +38,7 @@ class AuthScreen extends StatelessWidget {
                           children: const [
                             EmailTextField(),
                             PasswordTextField(),
+                            PasswordTextField(),
                             AuthButton(),
                           ],
                         ),
@@ -46,6 +46,13 @@ class AuthScreen extends StatelessWidget {
                     },
                   ),
                 ),
+                InkWell(
+                    onTap: () => Navigator.pushReplacementNamed(
+                        context, RouteNames.authLogInRoute),
+                    child: const Text(
+                      'سجل دخول حساب حالي',
+                      style: TextStyle(color: ColorManager.mainColor),
+                    ))
               ],
             ),
           ),

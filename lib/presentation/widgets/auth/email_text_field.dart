@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // import 'package:provider/provider.dart';
 
-import '../../../../business_logic/cubit/auth/auth_cubit.dart';
+import '../../../presentation/business_logic/cubit/auth/auth_cubit.dart';
 import '../../resources/color_manager.dart';
 import 'auth_strings.dart';
 
